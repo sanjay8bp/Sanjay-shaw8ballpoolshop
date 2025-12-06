@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sanjay Shaw 8 Ball Pool Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Monedas 8 Ball Pool de 100M a 1B disponibles y garantizadas. Ofertas seguras y legales. Contacto por WhatsApp.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img { max-width: 100%; display: block; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1.2rem 2.5rem;
+    }
+
+    .glass {
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+      border-radius: 1.4rem;
+      border: 1px solid rgba(148,163,184,0.3);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.8);
+      backdrop-filter: blur(22px);
+    }
+
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1.2rem;
+      position: sticky;
+      top: 0.6rem;
+      z-index: 20;
+      background: rgba(15,23,42,0.95);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #22c55e, #0ea5e9 40%, #0369a1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #020617;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 0 0 2px rgba(15,23,42,0.9);
+    }
+    .logo-text-main {
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: 0.03em;
+    }
+    .logo-text-sub {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-top: -0.18rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.82rem;
+    }
+    .nav-links a {
+      padding: 0.38rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: #9ca3af;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      border-color: rgba(148,163,184,0.7);
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.9);
+    }
+    .nav-cta {
+      padding: 0.4rem 0.95rem;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      box-shadow: 0 10px 30px rgba(16,185,129,0.45);
+      white-space: nowrap;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.1fr);
+      gap: 2.1rem;
+      margin-top: 1.6rem;
+      padding: 2rem 1.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -60%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(56,189,248,0.18) 0, transparent 50%),
+        radial-gradient(circle at 90% 40%, rgba(34,197,94,0.22) 0, transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      justify-content: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(34,197,94,0.65);
+      background: rgba(6,95,70,0.2);
+      font-size: 0.7rem;
+      color: #a7f3d0;
+    }
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.3);
+    }
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw, 2.7rem);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      max-width: 30rem;
+    }
+    .hero-subtitle strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+    .hero-list {
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.83rem;
+      color: #cbd5f5;
+    }
+    .hero-list span {
+      margin-right: 0.4rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.6rem;
+    }
+    .btn-primary {
+      padding: 0.6rem 1.15rem;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      box-shadow: 0 14px 36px rgba(16,185,129,0.55);
+    }
+    .btn-secondary {
+      padding: 0.58rem 1.05rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+      font-size: 0.86rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+    .hero-meta strong {
+      display: block;
+      color: #e5e7eb;
+      font-size: 0.92rem;
+    }
+
+    /* HERO RIGHT CARD */
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-card {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 1.7rem;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at top, rgba(56,189,248,0.25), #020617 58%);
+      box-shadow: 0 26px 60px rgba(15,23,42,0.9);
+      overflow: hidden;
+    }
+    .hero-card-header {
+      padding: 0.85rem 1rem 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .hero-card-server {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.6);
+    }
+    .hero-card-status {
+      font-size: 0.74rem;
+      color: #bbf7d0;
+    }
+    .hero-card-status span {
+      font-size: 0.8rem;
+      margin-right: 0.2rem;
+    }
+    .hero-card-main {
+      padding: 0.5rem 1rem 1rem;
+      font-size: 0.8rem;
+    }
+    .hero-card-main h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .hero-card-main p {
+      color: #9ca3af;
+      margin-bottom: 0.55rem;
+    }
+    .hero-card-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.3rem;
+    }
+    .hero-tag {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(248,250,252,0.5);
+      font-size: 0.7rem;
+      color: #e5e7eb;
+    }
+    .hero-coins {
+      font-size: 0.85rem;
+      color: #a5b4fc;
+      font-weight: 500;
+    }
+
+    .hero-floating {
+      position: absolute;
+      right: -0.15rem;
+      top: 0.85rem;
+      padding: 0.32rem 0.7rem;
+      border-radius: 999px 0 0 999px;
+      background: #22c55e;
+      color: #022c22;
+      font-size: 0.78rem;
+      font-weight: 600;
+      box-shadow: 0 10px 26px rgba(16,185,129,0.55);
+    }
+    .hero-note {
+      position: absolute;
+      left: -0.25rem;
+      bottom: 1.3rem;
+      font-size: 0.74rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.92);
+      color: #9ca3af;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-top: 2rem;
+      padding: 1.7rem 1.8rem;
+    }
+    section:nth-of-type(odd) {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.05), rgba(15,23,42,0.98));
+    }
+    section:nth-of-type(even) {
+      background: radial-gradient(circle at top right, rgba(34,197,94,0.05), rgba(15,23,42,0.98));
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      align-items: baseline;
+      margin-bottom: 1.3rem;
+      flex-wrap: wrap;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .section-subtitle {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      max-width: 22rem;
+    }
+
+    /* GRID BLOCKS */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      font-size: 0.86rem;
+      color: #d1d5db;
+    }
+
+    .pill-list {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+    }
+    .pill-list li {
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: rgba(15,23,42,0.95);
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: #e5e7eb;
+    }
+
+    /* PRICES / OFFERS */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      font-size: 0.84rem;
+    }
+    .card {
+      padding: 0.9rem 0.95rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: rgba(15,23,42,0.97);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(56,189,248,0.15), transparent 55%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    .card-title {
+      font-size: 0.96rem;
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+    .card-desc {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-bottom: 0.45rem;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .price {
+      font-weight: 600;
+      font-size: 0.96rem;
+      color: #a5b4fc;
+    }
+    .tag {
+      font-size: 0.74rem;
+      padding: 0.22rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+    }
+
+    /* PAYMENT METHODS */
+    .pay-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.7rem;
+      font-size: 0.82rem;
+    }
+    .pay-item {
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.96);
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .pay-label {
+      font-weight: 500;
+    }
+    .pay-note {
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.4rem;
+      font-size: 0.84rem;
+    }
+    .contact-list {
+      list-style: none;
+      margin-top: 0.5rem;
+      display: grid;
+      gap: 0.45rem;
+      color: #e5e7eb;
+    }
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.84rem;
+    }
+    .badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+    .wa-button {
+      margin-top: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      border: none;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 14px 34px rgba(16,185,129,0.6);
+    }
+    .wa-button span {
+      font-size: 1.1rem;
+    }
+    .contact-note {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-top: 0.45rem;
+    }
+
+    .contact-form {
+      padding: 0.8rem 0.9rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: rgba(15,23,42,0.96);
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.22rem;
+      margin-bottom: 0.6rem;
+    }
+    .field label {
+      font-size: 0.76rem;
+      color: #9ca3af;
+    }
+    .field input,
+    .field textarea {
+      border-radius: 0.7rem;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.96);
+      padding: 0.45rem 0.6rem;
+      color: #e5e7eb;
+      font-size: 0.8rem;
+      outline: none;
+    }
+    .field input:focus,
+    .field textarea:focus {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.6);
+    }
+    .field textarea {
+      resize: vertical;
+      min-height: 85px;
+    }
+    .form-btn {
+      width: 100%;
+      margin-top: 0.3rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: 0.9rem;
+      border: none;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      font-weight: 600;
+      font-size: 0.86rem;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 1.6rem;
+      padding: 1rem 1.3rem 0.3rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .footer-links {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a { opacity: 0.85; }
+    .footer-links a:hover { opacity: 1; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-inline: 1.4rem;
+      }
+      .hero-right { order: -1; }
+      section { padding-inline: 1.4rem; }
+      .two-col,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    @media (max-width: 720px) {
+      .nav {
+        padding-inline: 1rem;
+      }
+      .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+      .nav-links {
+        position: absolute;
+        right: 1rem;
+        top: 3rem;
+        background: rgba(15,23,42,0.98);
+        border-radius: 0.9rem;
+        border: 1px solid rgba(148,163,184,0.5);
+        padding: 0.6rem;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        min-width: 180px;
+      }
+      .nav-links.show { display: flex; }
+    }
+    @media (max-width: 480px) {
+      .page { padding-inline: 0.9rem; }
+      .hero,
+      section { padding-inline: 1.1rem; }
+      .hero-title { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- NAVBAR -->
+    <header class="glass nav">
+      <div class="logo">
+        <div class="logo-icon">8B</div>
+        <div>
+          <div class="logo-text-main">Sanjay Shaw 8 Ball Pool</div>
+          <div class="logo-text-sub">Monedas seguras · Ofertas completas</div>
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menuToggle">☰</div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#coins">Monedas</a>
+        <a href="#offers">Ofertas</a>
+        <a href="#payments">Pagos</a>
+        <a href="#contacto">Contacto</a>
+        <button class="nav-cta" onclick="window.open('https://wa.me/917319277816','_blank')">
+          WhatsApp Now 💬
+        </button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main class="glass hero">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          monedas de 100M a 1B disponibles y garantizadas
+        </div>
+
+        <h1 class="hero-title">
+          Compra <span>monedas 8 Ball Pool</span> seguras, rápidas y con referencias reales.
+        </h1>
+
+        <p class="hero-subtitle">
+          Ofertas para <strong>100M hasta 1B</strong> con total seguridad y legalidad.  
+          Todas las transacciones se hacen con pruebas y referencias ilimitadas ❤️
+        </p>
+
+        <div class="hero-list">
+          <div><span>✅</span>todas las ofertas (tacos, cash, golden shots, etc) en 8BP</div>
+          <div><span>🛡️</span>Seguridad total · Nada de estafas</div>
+          <div><span>📥</span>Bandeja de entrada… tengo referencia con prueba</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="window.open('https://wa.me/917319277816','_blank')">
+            Comprar ahora por WhatsApp 💬
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('payments').scrollIntoView({behavior:'smooth'});">
+            Ver métodos de pago
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <strong>100M – 1B+</strong>
+            Monedas disponibles todo el día
+          </div>
+          <div>
+            <strong>Referencias reales</strong>
+            Envío de prueba antes del trato grande
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-server">
+              🎱 8 Ball Pool
+            </div>
+            <div class="hero-card-status">
+              <span>🟢</span> Online ahora
+            </div>
+          </div>
+          <div class="hero-card-main">
+            <h3>Sanjay Shaw 8BP Shop</h3>
+            <p>Coins + ofertas especiales con trato directo por WhatsApp.</p>
+
+            <div class="hero-card-row">
+              <div class="hero-tag">100M → 1B disponibles</div>
+              <div class="hero-coins">Entrega rápida ⚡</div>
+            </div>
+
+            <div class="hero-card-row" style="margin-top:0.7rem;">
+              <div style="font-size:0.78rem;color:#9ca3af;">
+                Métodos de pago múltiples: PayPal, Binance, depósitos y más.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-floating">
+          100% Garantizado ✅
+        </div>
+
+        <div class="hero-note">
+          <span>📸</span> Pruebas de pago y referencia antes del trato
+        </div>
+      </div>
+    </main>
+
+    <!-- MONEDAS -->
+    <section class="glass" id="coins">
+      <div class="section-header">
+        <h2 class="section-title">Rangos de monedas disponibles</h2>
+        <p class="section-subtitle">
+          Puedes pedir pequeñas cantidades para probar, o packs grandes para full cuenta.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-title">Starter Pack</div>
+          <div class="card-desc">Ideal para probar el servicio y ver la seguridad.</div>
+          <div class="card-meta">
+            <span class="price">100M</span>
+            <span class="tag">Recomendado para prueba</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Player Pack</div>
+          <div class="card-desc">Para jugar cómodo, sin miedo a quedarte sin monedas.</div>
+          <div class="card-meta">
+            <span class="price">250M – 500M</span>
+            <span class="tag">Popular</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Pro Pack</div>
+          <div class="card-desc">Para jugadores que quieren subir fuerte a salas altas.</div>
+          <div class="card-meta">
+            <span class="price">500M – 1B<
